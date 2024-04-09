@@ -60,8 +60,8 @@ public class Achat {
         System.out.println(price);
         return price;
     }
-    public void setMontantAchat( double prixTotale) {
-        this.montantAchat = prixTotale;
+    public void setMontantAchat(double prixTotal) {
+        this.montantAchat = price;
         this.setReduction();
         this.setTVA();
     }
@@ -82,6 +82,7 @@ public class Achat {
         this.setTVA();
     }
     public String facture(){
+        this.setMontantTtc();
         return "\t\tFacture numero "+this.instanceA+"\nMontant HT: "+this.montantAchat+
                 " Ar\nRéduction: "+this.reduction+" Ar\nTVA: "+this.TVA+" Ar\nTotale: "+this.montantTtc+" Ar TTC";
 
